@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+body{
+    background-color: #3a3a3a;
+    color: white;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    background-color: #313130;
+    height: 100px;
+    position: sticky;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+h1{
+    color: #009fe3;
+}
+.navegation{
+    display: flex;
+    gap: 50px;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: white;
+    text-decoration: none; 
+}
+
+a:hover{
+    color: #e30613;
+    /* border-bottom: solid 1px #e30613;  */
+    transition: 0.3s ease;
+}
+
+.logo-caixa
+.logo-grande{
+    width: auto;
+    height: 90px;
+}
+
+.hero{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border: #e30613 solid 1px; */
+    font-size: 1.4rem;
+    width: 1000px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+}
+.about-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    border: #3aaa35 1px solid;
+    width: 500px;
+    height: auto;
+    gap: 25px;
+}
+
+.img-about{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.mesa-som{
+    height: 150px;
+    width: auto;
+    border-radius: 15px;
+    border: #3aaa35 solid 1px;
+}
+
+.show{
+    height: 150px;
+    width: auto;
+    border-radius: 15px;
+    border: #3aaa35 solid 1px;
+}
+
+.show-g{
+    height: 150px;
+    width: auto;
+    border-radius: 15px;
+    border: #3aaa35 solid 1px;
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.title-services{
+    display: flex;
+    justify-content: center;
+    border: #3aaa35 solid 1px;
+}
+.services-list{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 50px;
+}
+
+.services-item{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    border: solid 1px #3aaa35;
+    gap: 25px;
+    width: 200px;
+}
+
+.logo-ma{
+    height: 80px;
+    width: auto;
+}
+/* e30613
+3aaa35
+009fe3 */
+ 
