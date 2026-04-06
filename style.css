@@ -8,13 +8,13 @@
 body{
     background-color: #3a3a3a;
     color: white;
-    font-family: Verdana, Tahoma, sans-serif;
+    font-family: "montserrat", "archivo", "syne", sans-serif;
 }
 
 header{
     display: flex;
     justify-content: space-around;
-    background-color: #313130;
+    background-color: #313131;
     height: 100px;
     position: sticky;
     align-items: center;
@@ -26,6 +26,42 @@ header{
 h1{
     color: #009fe3;
 }
+
+/* Título de Seção - TAMANHO X */
+h2 {
+    font-family: 'Syne', sans-serif; /* Fonte impactante para títulos */
+    font-size: 2.8rem;
+    color: #009fe3;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* Subtítulo de Seção  */
+.about-title p, .services-title p, .events-title p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+/* Texto Comum */
+p, .about-text p, .services-item p {
+    font-family: 'Archivo', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #cccccc;
+}
+
+/* Títulos de Itens */
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 .navegation{
     display: flex;
     gap: 50px;
@@ -37,7 +73,8 @@ li{
 
 a{
     color: white;
-    text-decoration: none; 
+    text-decoration: none;
+    font-size: 1.2rem;
 }
 
 a:hover{
@@ -46,17 +83,25 @@ a:hover{
     transition: 0.3s ease;
 }
 
-.logo-caixa
 .logo-grande{
     width: auto;
-    height: 90px;
+    height: 60px;
+    display: flex;
 }
 
 .hero{
-    min-height: 100vh;
+    min-height: calc(100vh - 100px);
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('./assets/bgpurple.png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.bgpurple{
+    filter: blur(50px);
 }
 
 .title{
@@ -68,6 +113,29 @@ a:hover{
     /* border: #e30613 solid 1px; */
     font-size: 1.4rem;
     width: 1000px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.btn-hero {
+    display: inline-block;
+    padding: 15px 40px;
+    margin-top: 30px;
+    
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #3aaa35; 
+    
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none; 
+    transition: 0.3s ease; 
+}
+
+.btn-hero:hover {
+    background-color: #3aaa35;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(58, 170, 53, 0.6); 
 }
 
 .content{
@@ -76,47 +144,64 @@ a:hover{
     gap: 200px;
 }
 
-.about{
+.about {
+    padding: 100px 20px;
+    background-color: #3a3a3a; 
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 80px; 
+    flex-wrap: wrap; /* Para jogar a imagem para baixo */
+    padding: 40px 20px;
+}
+
+
+.about-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-title {
+    text-align: left; 
+    margin-bottom: 30px;
+}
+
+.about-title h2 {
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    margin-bottom: 20px; 
+}
+
+.img-about {
+    flex: 1;
+    min-width: 300px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 75px;
-}
-.about-text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: justify;
-    border: #3aaa35 1px solid;
-    width: 500px;
-    height: auto;
-    gap: 25px;
 }
 
-.img-about{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-.mesa-som{
-    height: 150px;
-    width: auto;
-    border-radius: 15px;
-    border: #3aaa35 solid 1px;
-}
-
-.show{
-    height: 150px;
-    width: auto;
-    border-radius: 15px;
-    border: #3aaa35 solid 1px;
+.about-img {
+    width: 100%;
+    max-width: 500px; 
+    height: 700px;
+    object-fit: cover;
+    
+    /* Faz o formato ser diferente*/
+    border-radius: 32% 68% 49% 51% / 57% 57% 62% 62%;
+    
+    /* border: 3px solid #009fe3; */
+    transition: 0.5s ease-in-out;
 }
 
-.show-g{
-    height: 150px;
-    width: auto;
-    border-radius: 15px;
-    border: #3aaa35 solid 1px;
+.about-img:hover {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    border-color: #3aaa35; 
+    box-shadow: 0 0 40px rgba(58, 170, 53, 0.6);
 }
 
 .services{
@@ -125,31 +210,98 @@ a:hover{
     gap: 25px;
 }
 
-.title-services{
-    display: flex;
-    justify-content: center;
-    border: #3aaa35 solid 1px;
-}
-.services-list{
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    gap: 50px;
+.services-title{
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 20px;
+    font-size: 1.5rem;
+    color: #ffffff; 
 }
 
-.services-item{
+.services-list {
+    display: flex;          
+    flex-wrap: wrap; /* se lotar, desce de linha */
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    list-style: none;
+}
+
+.services-item {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
-    border: solid 1px #3aaa35;
-    gap: 25px;
-    width: 200px;
+    text-align: center;
+    
+    flex: 1 1 280px; /* automatiza*/
+    max-width: 350px;
+    
+    background-color: #313131;
+    padding: 40px 25px;
+    border-radius: 20px;
+    border: 1px solid #444;
+    transition: 0.4s ease;
+}
+
+.services-item:hover {
+    border-color: #3aaa35;
+    transform: translateY(-10px);
 }
 
 .logo-ma{
     height: 80px;
     width: auto;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px; 
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.event-card {
+    position: relative;
+    height: 300px; 
+    border-radius: 15px;
+    overflow: hidden; 
+    border: 1px solid #444;
+    transition: 0.4s ease;
+}
+
+.event-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: 0.2s ease;
+    filter: brightness(0.7) saturate(0.8); 
+}
+
+.event-card:hover {
+    transform: translateY(-10px); /* O card vai subir */
+    border-color: #009fe3; 
+    box-shadow: 0 10px 30px rgba(0, 159, 227, 0.3);
+}
+
+.event-card:hover img {
+    transform: scale(1.1);
+    filter: brightness(1) saturate(1);
+}
+
+.events-title {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 20px;
+    font-size: 1.5rem;
+    color: #ffffff; 
+}
+
+.events-title h2 {
+    margin-bottom: 10px;
 }
 /* e30613
 3aaa35
