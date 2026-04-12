@@ -5,6 +5,12 @@
     font-family: inherit;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+section, article{
+    scroll-margin-top: 100px;
+}
 body{
     background-color: #3a3a3a;
     color: white;
@@ -18,7 +24,6 @@ header{
     height: 100px;
     position: sticky;
     align-items: center;
-    position: sticky;
     top: 0;
     z-index: 1000;
 }
@@ -37,11 +42,11 @@ h2 {
 }
 
 /* Subtítulo de Seção  */
-.about-title p, .services-title p, .events-title p {
+.title p, .about-title p, .services-title p, .events-title p, .contact-title p{
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
     color: #ffffff;
-    opacity: 0.9;
+    /* opacity: 0.9; */
     margin-bottom: 20px;
 }
 
@@ -240,11 +245,14 @@ a:hover{
     
     background-color: #313131;
     padding: 40px 25px;
+    gap: 30px;
     border-radius: 20px;
     border: 1px solid #444;
     transition: 0.4s ease;
 }
-
+/* .services-item h3{
+    color: #e30613;
+} */
 .services-item:hover {
     border-color: #3aaa35;
     transform: translateY(-10px);
@@ -283,8 +291,8 @@ a:hover{
 
 .event-card:hover {
     transform: translateY(-10px); /* O card vai subir */
-    border-color: #009fe3; 
-    box-shadow: 0 10px 30px rgba(0, 159, 227, 0.3);
+    border-color: #3aaa35; 
+    box-shadow: 0 0 40px rgba(58, 170, 53, 0.6);
 }
 
 .event-card:hover img {
@@ -306,4 +314,77 @@ a:hover{
 /* e30613
 3aaa35
 009fe3 */
- 
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+input::placeholder, textarea::placeholder{
+    color: #ffffff;
+    opacity: 1;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 600px;
+}
+
+
+form input, form textarea{
+    background-color: transparent;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 1px;
+    outline: none;
+    transition: 0.2s;
+}
+
+form input:hover, form textarea:hover{
+    border-color: #3aaa35;
+}
+
+form input:focus, form textarea:focus{
+    border-color: #3aaa35;
+}
+
+form button{
+    width: 200px;
+    height: 40px;
+    align-self: center;
+    cursor: pointer;
+    color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: #313131;
+    transition: 0.3s;
+    font-size: 16px
+}
+
+form button:hover{
+    transform: scale(1.1);
+    border-color: #3aaa35;
+}
+
+footer{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #313131;
+    font-size: 16px;
+}
